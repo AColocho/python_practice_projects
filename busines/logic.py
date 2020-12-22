@@ -74,7 +74,7 @@ def simulate_day(settings,logic):
     weather = settings.rand_weather()
     lawsuit = settings.get_sued(cash)
     flood = settings.store_flooded(cash)    
-    sales = round(settings.sales_for_the_day(weather,inventory))
+    sales,inv_sold = settings.sales_for_the_day(weather,inventory)
     
     Day_To_Day().beggining_of_day(day,weather)
     
@@ -113,7 +113,7 @@ def simulate_day(settings,logic):
             bankrupt = False
     
     logic.cash += sales
-    logic.inventory -= sales
+    logic.inventory -= inv_sold
     
     logic.loan_repayment()
     

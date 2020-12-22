@@ -52,23 +52,31 @@ class Easy_Game:
             low = inventory * .5
             high = inventory 
             sales = random.randint(low=low,high=high)
+            total_inv_sold = sales
+            sales = (sales * .5) + sales
         
         elif weather == 'cloudy':
             low = inventory * .5
             high = inventory * .85
             sales = random.randint(low=low,high=high)
+            total_inv_sold = sales
+            sales = (sales * .5) + sales
             
         elif weather == 'rain':
             low = inventory * .3
             high = inventory * .6
             sales = random.randint(low=low,high=high)
+            total_inv_sold = sales
+            sales = (sales * .5) + sales
             
         else:
             low = 0
             high = inventory * .35
             sales = random.randint(low=low,high=high)
+            total_inv_sold = sales
+            sales = (sales * .5) + sales
             
-        return sales
+        return sales, total_inv_sold
 
 class Hard_Game:
     cash = 2000
@@ -122,20 +130,28 @@ class Hard_Game:
             low = inventory * .3
             high = inventory * .85
             sales = random.randint(low=low,high=high)
+            total_inv_sold = sales
+            sales = (sales * .25) + sales
         
         elif weather == 'cloudy':
             low = inventory * .35
             high = inventory * .7
             sales = random.randint(low=low,high=high)
+            total_inv_sold = sales
+            sales = (sales * .25) + sales
             
         elif weather == 'rain':
             low = inventory * .25
             high = inventory * .6
             sales = random.randint(low=low,high=high)
+            total_inv_sold = sales
+            sales = (sales * .25) + sales
             
         else:
             low = 0
             high = inventory * .2
             sales = random.randint(low=low,high=high)
+            total_inv_sold = sales
+            sales = (sales * .25) + sales
             
-        return sales
+        return sales, total_inv_sold
