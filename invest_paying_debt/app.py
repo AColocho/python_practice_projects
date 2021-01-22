@@ -21,6 +21,7 @@ def total_amount_paid(interest_paid, debt_total, debt_outstanding):
     amount = interest_paid + (debt_total - debt_outstanding) + debt_outstanding
     return amount
 
+st.set_page_config(page_title='Debt vs Investment', layout='centered', initial_sidebar_state='collapsed')
 main_container = st.beta_container()
 
 main_container.title('12-Month Debt vs Investment Calculator')
