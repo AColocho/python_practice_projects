@@ -53,3 +53,4 @@ main_container.write('''
                      - Average APR according to the FED.
                      - All debt is paid at the end of the 12 months.
                      ''')
+main_container.write('**Disclouser**: The data this calculator provides should **NOT** be taken as advise.')
